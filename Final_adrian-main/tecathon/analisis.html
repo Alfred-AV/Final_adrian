@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Seguros e Inversiones</title>
+    <link rel="stylesheet" href="analisis.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Logo" class="logo">
+
+        <div class="section">
+            <label for="seguroPregunta">¿Posees algún tipo de seguro?</label>
+            <select id="seguroPregunta" onchange="mostrarSeguros()">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+
+            <div id="seguroLista" class="oculto">
+                <h3>¿Qué tipo de seguros posees?</h3>
+                <div class="seguro-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-seguro">
+                        <option value="medico">Médico</option>
+                        <option value="automovilistico">Automovilístico</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="vida">Vida</option>
+                        <option value="incapacidad">Incapacidad</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-seguro">
+                </div>
+                <div class="seguro-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-seguro">
+                        <option value="medico">Médico</option>
+                        <option value="automovilistico">Automovilístico</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="vida">Vida</option>
+                        <option value="incapacidad">Incapacidad</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-seguro">
+                </div>
+                <div class="seguro-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-seguro">
+                        <option value="medico">Médico</option>
+                        <option value="automovilistico">Automovilístico</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="vida">Vida</option>
+                        <option value="incapacidad">Incapacidad</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-seguro">
+                </div>
+                <div class="seguro-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-seguro">
+                        <option value="medico">Médico</option>
+                        <option value="automovilistico">Automovilístico</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="vida">Vida</option>
+                        <option value="incapacidad">Incapacidad</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-seguro">
+                </div>
+                <div class="seguro-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-seguro">
+                        <option value="medico">Médico</option>
+                        <option value="automovilistico">Automovilístico</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="vida">Vida</option>
+                        <option value="incapacidad">Incapacidad</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-seguro">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <label for="inversionPregunta">¿Posees algún tipo de inversión?</label>
+            <select id="inversionPregunta" onchange="mostrarInversiones()">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+
+            <div id="inversionLista" class="oculto">
+                <h3>¿Qué tipo de inversiones posees?</h3>
+                <!-- Lista de 3 tipos de inversiones -->
+                <div class="inversion-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-inversion">
+                        <option value="corto">Corto Plazo</option>
+                        <option value="mediano">Mediano Plazo</option>
+                        <option value="largo">Largo Plazo</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-inversion">
+                </div>
+                <div class="inversion-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-inversion">
+                        <option value="corto">Corto Plazo</option>
+                        <option value="mediano">Mediano Plazo</option>
+                        <option value="largo">Largo Plazo</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-inversion">
+                </div>
+                <div class="inversion-item">
+                    <label>Tipo:</label>
+                    <select class="tipo-inversion">
+                        <option value="corto">Corto Plazo</option>
+                        <option value="mediano">Mediano Plazo</option>
+                        <option value="largo">Largo Plazo</option>
+                    </select>
+                    <label>Monto ($):</label>
+                    <input type="number" class="monto-inversion">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <label for="capitalPregunta">¿Tienes algún tipo de ahorro?</label>
+            <select id="capitalPregunta" onchange="mostrarCapital()">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+        
+            <div id="capitalLista" class="oculto">
+                <h3>¿En qué rango se encuentra tu ahorro?</h3>
+                <div class="capital-item">
+                    <label>Rango:</label>
+                    <select class="tipo-capital">
+                        <option value="1">$500 - $1,000</option>
+                        <option value="2">$1,000 - $10,000</option>
+                        <option value="3">$10,000 - $50,000</option>
+                        <option value="4">$50,000 - $100,000</option>
+                        <option value="5">Más de $100,000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="guardarDatos()">GUARDAR</button>
+    </div>
+
+    <script src="analisis.js"></script>
+</body>
+</html>

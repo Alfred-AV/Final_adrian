@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión con MySQL</title>
+    <style>
+        /* Estilos globales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #486b7a;
+            color: #fff;
+        }
+
+        .top-bar {
+            width: 100%;
+            background-color: #2f4157;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between; /* Esto sigue asegurando que el logo y el usuario estén a los lados opuestos */
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        .welcome-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            flex-grow: 1; /* Esto asegura que el texto se expanda y mantenga el espacio entre el logo y la imagen de usuario */
+        }
+
+        /* Estilo para la imagen de usuario */
+        .usuario-btn {
+            text-decoration: none; 
+        }
+
+        /* Cambiar el margin-right para mover la imagen un poco más a la izquierda */
+        .usuario-img {
+            width: 60px;  
+            height: 60px;
+            cursor: pointer;
+            margin-right: 0px; 
+        }
+
+        /* Estilos para el resto de los elementos */
+        .content {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #5e7a8a;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d0e1e8;
+        }
+
+        .gastos-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        #nuevoGasto, #montoGasto {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #2f4157;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d2b37;
+        }
+
+        .investment-options {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .investment-options img {
+            width: 80px;
+            height: 40px;
+        }
+
+        .investment-options a {
+            text-decoration: none;
+        }
+
+        .investment-options span {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Nuevo estilo para la imagen de scanner */
+        .scanner-image {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .scanner-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo">
+        </div>
+        <h1>Lista de Usuarios</h1>
+        <ul id="usuarios"></ul>
+        <a href="usuario.html" class="usuario-btn">
+            <img src="images/usuario.png" alt="Usuario" class="usuario-img">
+        </a>
+    </header>
+
+    <script class="body">
+        // Llamada para obtener los datos de usuarios
+        fetch('conexion.php')
+            .then(response => response.json())
+            .then(data => {
+                const listaUsuarios = document.getElementById("usuarios");
+                data.forEach(usuario => {
+                    const item = document.createElement("li");
+                    item.textContent = `Nombre: ${usuario.nombre}, Email: ${usuario.email}`;
+                    listaUsuarios.appendChild(item);
+                });
+            })
+            .catch(error => console.error("Error al obtener datos:", error));
+    </script>
+</body>
+</html>

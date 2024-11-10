@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finpal - Inicio de sesión</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Logo de Finpal" class="logo-image" />
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Usuario" class="input-field">
+            <input type="password" id="password" placeholder="Contraseña" class="input-field">
+            <button type="button" class="login-button" onclick="validateLogin()">Iniciar sesión</button>
+            <p id="error-message" style="color: red; display: none;">Usuario o contraseña incorrectos</p>
+        </div>
+    </div>
+    <script src="inicio.js"></script>
+</body>
+</html>

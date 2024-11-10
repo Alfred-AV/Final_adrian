@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link rel="stylesheet" href="usuario.css">
+    <script src="usuario.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <button onclick="Analisis()" class="btn-analisis">Análisis</button>
+        </header>
+        <main>
+            <section class="acciones">
+            </section>
+
+            <section class="cuenta-info">
+                <div class="cuenta">
+                    <h2>Cuenta (en pesos)</h2>
+                    <p id="saldo">$0.00</p>
+                </div>
+                <div class="tarjetas">
+                    <h2>Tarjetas</h2>
+                    <p id="tarjeta">4749-3981-2123-8741</p>
+                    <button onclick="agregarTarjeta()">Agregar Tarjeta</button>
+                </div>
+            </section>
+
+            <section class="gastos">
+                <h2>Gastos</h2>
+                <div class="grafica">
+                    <div class="porcentaje" id="porcentajeGastos">0%</div>
+                </div>
+                <div class="historial">
+                    <h3>Historial de Gastos</h3>
+                    <ul id="historialGastos">
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Nueva sección para mostrar los datos de la API -->
+            <section class="api-datos">
+                <h2>Datos Financieros</h2>
+                <ul id="datosFinazon"></ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

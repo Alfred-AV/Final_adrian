@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo">
+        </div>
+        <h1 class="welcome-text">Bienvenidos</h1>
+        <a href="usuario.html" class="usuario-btn">
+            <img src="images/usuario.png" alt="Usuario" class="usuario-img">
+        </a>
+    </header>
+    
+    <div class="content">
+        <div class="section">
+            <p class="label">Ingresos Mensuales (en pesos)</p>
+            <div class="value" id="ingresoMensual">$0.00</div>
+        </div>
+
+        <div class="section">
+            <p class="label">Cuenta (en pesos)</p>
+            <div class="value" id="cuentaTotal">$0.00</div>
+        </div>
+
+        <div class="section">
+            <p class="label">Gastos:</p>
+            <ul class="gastos-list" id="gastosList"></ul>
+            <form id="gastoForm">
+                <button type="button" onclick="window.location.href='PlanesDeApoyo.html'">Agregar Gasto</button>
+            </form>
+        </div>
+
+        <!-- Nuevo recuadro con imagen scanner -->
+        <div class="section">
+            <p class="label">Escanear Documento:</p>
+            <a href="scanner.html">
+                <img src="images/scanner.png" alt="Scanner" class="scanner-image">
+            </a>
+        </div>
+
+        <div class="section">
+            <p class="label">Opciones de Inversión</p>
+            <div class="investment-options">
+                <a href="https://www.google.com" target="_blank">
+                    <img src="images/nu.png" alt="Nu">
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <img src="images/bbva.png" alt="BBVA">
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <span>CETES</span>
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <span>ACCIONES</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Botón para borrar los datos -->
+        <div class="section">
+            <button type="button" onclick="borrarDatos()">Borrar Datos</button>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>

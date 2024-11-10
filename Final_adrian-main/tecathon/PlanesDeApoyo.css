@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #577C8E;
+    display: flex; /* Usa flexbox en el body */
+    flex-direction: column; /* Coloca los elementos de arriba a abajo */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+
+#header {
+    padding: 40px;
+    border: 3px solid #2F4157;
+    margin: 0 auto;
+    background-color: #2F4157;
+    display: flex; /* Usa flexbox para alinear los elementos en línea */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 10px; /* Espacio entre el logo y el texto */
+    width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
+}
+
+
+.logo {
+    height: 90px; 
+    width: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px; 
+    color: #577c8e; 
+    align: center;
+  }
+
+.container {
+    margin: 20px;
+}
+
+.box {
+    background-color: #C7D9E5;
+    margin: 20px 0;
+    padding: 20px;
+    width: 960px;
+    border-radius: 8px;
+}
+
+.box h2 {
+    color: #2F4157;
+}
+
+.monto-titulo{
+    display: inline;
+}
+
+#monto{
+    width: 200px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #2F4157;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2F4157;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e2a37;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option-button {
+    background-color: #2F4157;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.option-button:hover {
+    background-color: #1e2a37;
+}

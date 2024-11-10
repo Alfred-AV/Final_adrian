@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos Hormiga</title>
+    <link rel="stylesheet" href="PlanesDeApoyo.css">
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>Control de Gastos Hormiga</h1>
+    </div>
+    
+    <!-- Mostrar ingreso mensual y cuenta total -->
+    <div class="container">
+        <div class="box">
+            <h2>Ingreso Mensual</h2>
+            <p id="ingresoMensual"></p>
+        </div>
+
+    </div>
+
+    <!-- Formulario de agregar nuevo gasto -->
+    <div class="container">
+        <div class="box">
+            <h2>Agregar Nuevo Gasto</h2>
+            <form id="gastoForm">
+                <label for="nuevoGasto">Nombre del Gasto:</label>
+                <input type="text" id="nuevoGasto" required>
+                <label for="montoGasto">Monto:</label>
+                <input type="number" id="montoGasto" required>
+                
+                <label for="tipoGasto">Tipo de Gasto:</label>
+                <select id="tipoGasto">
+                    <option value="Fijos">Fijos</option>
+                    <option value="Variable">Variable</option>
+                    <option value="Extraordinario">Extraordinario</option>
+                    <option value="Indefinido">Indefinido</option>
+                </select>
+                
+                <button type="button" onclick="agregarGasto()">Agregar Gasto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="PlanesDeApoyo.js"></script>
+</body>
+</html>
